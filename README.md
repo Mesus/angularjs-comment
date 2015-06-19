@@ -17,6 +17,7 @@ app.js
 	*这是一个入口文件，依赖注入了其它模块  
 	*/  
 	var LiuYanBan = angular.module('LiuYanBan', ['ngRoute', 'listM', 'liuYan']);  
+
 	// LiuYanBan.directive('list', function(){
 	// 	return {
 	// 		restrict: 'E',
@@ -45,3 +46,5 @@ app.js
 			redirectTo: "/index"
 		})
 	});
+
+### 学习参考 [Markdown 语法说明 (简体中文版)](http://wowubuntu.com/markdown/#em)， [献给写作者的 Markdown 新手指南](http://www.jianshu.com/p/q81RER)
