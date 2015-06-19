@@ -9,12 +9,12 @@
 
 ============================================
 
-= 入口文件  
+==== 入口文件  
 - app.js   
 	/*
 	*这是一个入口文件，依赖注入了其它模块  
 	*/  
-	var LiuYanBan = angular.module('LiuYanBan', ['ngRoute', 'listM', 'liuYan']);
+	var LiuYanBan = angular.module('LiuYanBan', ['ngRoute', 'listM', 'liuYan']);  
 	// LiuYanBan.directive('list', function(){
 	// 	return {
 	// 		restrict: 'E',
@@ -25,7 +25,7 @@
 	// 			alert(element);
 	// 		}
 	// 	};
-	// });
+	// });  
 	LiuYanBan.config(function($routeProvider){
 		$routeProvider.when('/index', {
 			templateUrl : 'tpl/list.html',
