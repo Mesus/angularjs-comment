@@ -5,7 +5,9 @@
 
 *********************************************
 
-*在这里顺便联系一下Markdown语法格式；  *这个留言板没有用到指令，用到了自定义过滤器* *没有用到AngularJs-UI，在写的时候大多参考官方API文档；
+- * 在这里顺便联系一下Markdown语法格式；  
+- * 这个留言板没有用到指令，用到了自定义过滤器 * 
+- * 没有用到AngularJs-UI，在写的时候大多参考官方API文档；
 
 ============================================
 
@@ -15,6 +17,7 @@
 	*这是一个入口文件，依赖注入了其它模块  
 	*/  
 	var LiuYanBan = angular.module('LiuYanBan', ['ngRoute', 'listM', 'liuYan']);  
+	
 	// LiuYanBan.directive('list', function(){
 	// 	return {
 	// 		restrict: 'E',
