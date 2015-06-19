@@ -1,0 +1,70 @@
+<div class="container">
+<div class="row">
+	<div class="listbox col-md-offset-2 col-md-8">
+	<ul class="liuYanList">
+		<li ng-repeat="list in data">
+			<div class="row">
+			  <div class="col-md-3">
+			    <a href="javascript:;" class="thumbnail">
+			      <img src="images/head{{list.headimg|limitTo:1}}.png" alt="{{list.name}}">
+			    </a>
+			  </div>
+			  <div class="col-md-9">
+			  	<div class="row info">
+			  		<div class="col-md-2">
+			  			<strong class="color-green name">{{list.name}}</strong> 
+			  		</div>
+					<div class="col-md-5">
+			  			<span class="email"><i class="glyphicon glyphicon-envelope"></i> {{list.email}}</span>
+			  		</div> 
+					<div class="col-md-5 text-right">
+			  			<span><i class="glyphicon glyphicon-time"></i> {{list.time|date:'yyyy年MM月dd日 HH:mm:ss'}}</span>
+			  		</div>
+			  	</div>
+			  	<div class="row">
+			  		<div class="col-md-12 content">
+			  			{{list.content}}
+			  		</div>
+			  	</div>
+			  	<div class="row">
+			  	  <div class="col-md-12 text-right">
+					<a href="#/replay/{{list.id}}/{{list.name}}">回复</a>
+			  	  </div>
+			  	</div>
+			  </div>
+			</div><!--row-->
+			<!-- 回复 -->
+			<div class="row replay">
+				<div class="col-md-offset-3 col-md-9">
+					<ul>
+						<li ng-repeat="v in list['replay']">
+						  <div class="row">
+							<div class="col-md-2"><img src="images/head{{v.headimg|limitTo:1}}.png" alt="{{v.name}}" width="40px" height="40px"></div>
+							<div class="col-md-10"><strong class="color-green">{{v.name}}</strong> 回复说：{{v.content}} [{{v.time|date:'yyyy年MM月dd日 HH:mm:ss'}}]</div>
+						  </div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<!-- 回复 -->
+		</li>
+	</ul>
+</div>
+</div>
+<div class="row">
+	<div class="col-md-8 col-md-offset-2 page">
+	  <div class="row">
+		<div class="col-md-5">
+			<button class="btn btn-primary" ng-click="setData(nowPage-1, pageConfig.pageSize)" ng-disabled="firstData">上一页</button>
+			<button class="btn btn-primary" ng-click="setData(nowPage+1, pageConfig.pageSize)" ng-disabled="endData">下一页</button>
+			<button class="btn btn-info" ng-show="endData" ng-click="setData(1, pageConfig.pageSize)">首页</button>
+		</div>
+	  	<div class="col-md-5">
+			共<span ng-bind="allPage" class="color-green"></span>页 /
+			<span ng-bind="dataLen" class="color-green"></span>条留言 /
+			当前第<span ng-bind="nowPage" class="color-green"></span>页 
+		</div>
+	 </div>
+	</div>
+</div>
+</div>

@@ -1,0 +1,105 @@
+body{
+	background:#eee;
+}
+/*颜色*/
+.color-green{
+	color:#26C281;
+}
+
+ul,ol{
+	margin:0px;padding:0px;
+}
+/*首页巨慕*/
+.jumbotron{
+	height:300px;
+	background: url(../images/head.jpg) left center;
+	position: relative;
+}
+.jumbotron .addLiuYan{
+	position: absolute;
+	top:70%;
+	right: 10%;
+	background: transparent;
+	color:#eee;
+}
+.jumbotron .addLiuYan:hover{
+	background: #eee;
+	color:#22a7f0;
+}
+
+/*留言表单*/
+.liuYanForm{
+	padding:0px;
+}
+.panel-footer{
+	padding:0px;
+}
+.errorInfo{
+	color:red;
+}
+/*留言表单*/
+
+
+/*留言列表*/
+.listbox{
+	color:#888;
+}
+.liuYanList{
+	list-style: none;
+}
+.liuYanList li{
+	background:#fff;padding: 20px 20px 0px 20px;margin-bottom: 20px;
+}
+.liuYanList .info{
+	/*line-height: 50px;*/
+	padding-bottom: 10px;
+	border-bottom:1px #eee solid;
+}
+.liuYanList	.content{
+	padding-top: 20px;
+	/*border-top:1px #eee solid;*/
+	text-indent: 2em;
+	color:#333;
+	font-size: 16px;
+}
+
+/*留言回复列表*/
+.listbox ul{
+	list-style: none;
+}
+.listbox .replay{
+	/*border-top:1px #eee solid;*/
+}
+
+/*重写bootstrap样式*/
+.alert-state{
+  color: #31708f;
+  background-color: #d9edf7;
+  border-color: #bce8f1;
+}
+.alert-statetrue {
+  color: #3c763d;
+  background-color: #dff0d8;
+  border-color: #d6e9c6;
+}
+.alert-statefalse {
+  color: #a94442;
+  background-color: #f2dede;
+  border-color: #ebccd1;
+}
+
+/*分页按钮*/
+.page{
+	/*background: #fff;*/
+	margin-bottom: 20px;
+}
+
+
+/*页脚*/
+#footer{
+	width:100%;
+	height:80px;
+	background: #333;
+	line-height: 70px;
+	color:#aaa;
+}

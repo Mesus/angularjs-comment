@@ -1,0 +1,57 @@
+<div class="container">
+<div class="panel panel-primary col-md-6 col-md-offset-3 liuYanForm">
+	<div class="panel-heading">
+        <div class="panel-title" ng-bind="panelHead">编辑留言</div>
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-12">
+                <form class="form-horizontal" role="form" name="form" novalidate ng-submit="sendData()">
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">
+                            昵称：
+                        </label>
+                        <div class="col-md-7">
+                            <input type="text" name="username" class="form-control" placeholder="6位字母、数字、下划线" ng-model="userInfo.name" required ng-maxlength="6" ng-pattern="/^[0-9a-zA-Z]+$/">
+                        </div>
+                        <div class="col-md-3"><span class="errorInfo" ng-show="form.username.$error.required || form.username.$error.maxlength || form.username.$error.pattern">{{form.username.$error}}</span></div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">
+                            邮箱：
+                        </label>
+                        <div class="col-md-7">
+                            <input type="email" name="email" class="form-control" placeholder="邮箱" ng-model="userInfo.email" required ng-pattern="/([\da-zA-Z_-])+@[\da-zA-Z]+\.[a-zA-Z]+/">
+                        </div>
+                        <div class="col-md-3">
+                        	<span class="errorInfo" ng-show="form.email.$error.required || form.email.$error.pattern">{{form.email.$error}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="col-md-2 control-label">
+                            内容：
+                        </label>
+                        <div class="col-md-7">
+                            <textarea name="content" class="form-control" ng-model="userInfo.content" required ng-maxlength="500"></textarea>
+                        </div>
+                        <div class="col-md-3">
+                        	<span class="errorInfo" ng-show="form.content.$error.required || form.content.$error.maxlength">{{form.content.$error}}</span>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                    <div class="form-group">
+                        <div class="col-md-offset-2 col-md-10">
+                            <button type="submit" class="btn btn-success" ng-disabled="form.$invalid || btn">留言</button>
+                            <button type="button" class="btn btn-default" ng-click="reset()">清空</button>
+                            <a href="#/index" class="btn btn-primary col-md-offset-4">返回</a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <div class="alert alert-state{{btn}}" role="alert" ng-bind="sendState">提交状态</div>
+    </div>
+</div>
+</div>
